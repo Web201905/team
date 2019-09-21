@@ -30,21 +30,11 @@
     <main>
       <div class="nav_top_swi">
         <van-swipe :autoplay="3000">
-          <van-swipe-item>
-            <img src="../../img/carousel1.jpg" alt="">
-          </van-swipe-item>
-          <van-swipe-item>
-            <img src="../../img/carousel2.jpg" alt="">
-          </van-swipe-item> 
-          <van-swipe-item>
-            <img src="../../img/carousel3.jpg" alt="">
-          </van-swipe-item>
-          <van-swipe-item>
-            <img src="../../img/carousel4.jpg" alt="">
+          <van-swipe-item v-for="(p,i) of carousel" :key="i">
+            <img :src="'http://127.0.0.1:8080/'+p.img_url" alt="">
           </van-swipe-item>
         </van-swipe>
       </div>
-      
       <!-- 日期和城市选择 -->
       <div class="selections">
         <!-- 日期选择 -->
@@ -127,7 +117,7 @@
          <!-- 内容第三行 -->
         <van-row>
           <van-col span="8">
-            <img src="../../img/16,0,13,34681,1800,1200,4b5fbdac.jpg" class="img_room" alt="">
+            <img src="../../img/photo.jpg" class="img_room" alt="">
             <div class="content_v2_DIV">
               <img class="img_small" src="../../img/small.jpg" alt="">
               <span class="room_name">屋里灰灰的家 - 苏州</span>
@@ -178,17 +168,8 @@
       <!-- 中部UL身份验证.. -->
       <div class="content_v2 marginB30">
         <ul class="xz_ads">
-          <li>
-            <img src="../../img/2019-09-20_101729.png" alt="">
-          </li>
-          <li>
-            <img src="../../img/2019-09-20_101815.png" alt="">
-          </li>
-          <li>
-            <img src="../../img/2019-09-20_101834.png" alt="">
-          </li>
-          <li>
-            <img src="../../img/2019-09-20_101848.png" alt="">
+          <li v-for="(p,i) of  personFour" :key="i">
+            <img :src="'http://127.0.0.1:8080/'+p.img_url" alt="">
           </li>
         </ul> 
       </div>
@@ -201,34 +182,13 @@
         <div class="index_comment_swis">
           <div>
             <van-swipe indicator-color="#f05b72" :autoplay="4000"  vertical class="index_comment_swi">
-              <van-swipe-item>
-                <div class="nav_bottom_font">房客点评</div>
-                <div class="nav_bottom_img_div"><img class="nav_bottom_img" src="../../img/details1_small.jpg"></div>
-                <div class="nav_bottom_font">王帅</div>
-                <div class="nav_bottom_font">2019.9.20</div>
-                <div class="nav_bottom_font"><a href="javascript:;">看见这家民宿就被吸引了，感觉很有情调，来了果然没有失望。小院设计的很漂亮，也很用心，硬件设施很好。吃完饭天色渐暗，在小院品茶，乘凉，烧烤，闲谈，真的很惬意。本来想第二天一早去青龙峡的，可小院里能玩的东西太多了，早上感觉没玩够就又玩了一上午，下午才去的青龙峡。只住了一天，真的有点没住够。有K歌房，还有一台街机，童年回忆啊。老人们都在打麻将，反正我看没有闲着的，大家难得聚在一起，玩的都很开心。</a></div>
-              </van-swipe-item>
-              <van-swipe-item>
-                <div class="nav_bottom_font">房客点评</div>
-                <div class="nav_bottom_img_div"><img class="nav_bottom_img" src="../../img/small.jpg"></div>
-                <div class="nav_bottom_font">王帅</div>
-                <div class="nav_bottom_font">2019.9.20</div>
-                <div class="nav_bottom_font"><a href="javascript:;">我出生在美丽的洱海边，步入社会后开过服装店，开过饭店，最后回到洱海边做了一位迎五湖四海客人的房东。我爱好不多，平时喜欢清晨环海路跑跑步，看看美丽的日出，也喜欢开着小车兜兜风，中午在家品品茶，再照顾一下满院子的小萌肉。超喜欢养猫咪，可是它们后来都跑了！还喜欢用镜头留下每一个美好的瞬间，喜欢用脚步去丈量景区的每一个角落。欢迎加入我的队伍，我在苍山脚下洱海边等着你哦。</a></div>
-              </van-swipe-item>
-              <van-swipe-item>
-                <div class="nav_bottom_font">房客点评</div>
-                <div class="nav_bottom_img_div"><img class="nav_bottom_img" src="../../img/details2_small.jpg"></div>
-                <div class="nav_bottom_font">王帅</div>
-                <div class="nav_bottom_font">2019.9.20</div>
-                <div class="nav_bottom_font"><a href="javascript:;">由于上午很忙，没能在11点之前送屈先生一家四口，很是遗憾。但当我打开房门，看到房内所有物品摆放都和入住前一模一样，连垃圾袋都已换上新的，顿时让我想到了以前的很多老顾客：有的临走时垃圾忘带走了，微信里不断抱歉；有的为了让我做得更好，建议我房内要放纸抽、烟灰缸等小的必需品，客人进房前要把空调打开等等。这些都让我学到了很多，感谢你们四年的陪伴，我会尽心获得更多与你们出行相关的资源，最大限度的提供给你们。</a></div>
-              </van-swipe-item>
-              <van-swipe-item>
-                <div class="nav_bottom_font">房客点评</div>
-                <div class="nav_bottom_img_div"><img class="nav_bottom_img" src="../../img/details2_small.jpg"></div>
-                <div class="nav_bottom_font">王帅</div>
-                <div class="nav_bottom_font">2019.9.20</div>
-                <div class="nav_bottom_font"><a href="javascript:;">看见这家民宿就被吸引了，感觉很有情调，来了果然没有失望。小院设计的很漂亮，也很用心，硬件设施很好。吃完饭天色渐暗，在小院品茶，乘凉，烧烤，闲谈，真的很惬意。本来想第二天一早去青龙峡的，可小院里能玩的东西太多了，早上感觉没玩够就又玩了一上午，下午才去的青龙峡。只住了一天，真的有点没住够。有K歌房，还有一台街机，童年回忆啊。老人们都在打麻将，反正我看没有闲着的，大家难得聚在一起，玩的都很开心。</a></div>
-              </van-swipe-item>
+              <van-swipe-item v-for="(p,i) of bottomCarousel" :key="i">
+                <div class="nav_bottom_font">{{p.ltitle}}</div>
+                <div class="nav_bottom_img_div"><img :src="'http://127.0.0.1:8080/'+p.img_url" alt=""></div>
+                <div class="nav_bottom_font">{{p.lname}}</div>
+                <div class="nav_bottom_font">{{p.ldate}}</div>
+                <div class="nav_bottom_font"><a href="javascript:;">{{p.ldetails}}</a></div>
+              </van-swipe-item>    
             </van-swipe>
           </div>
         </div> 
@@ -318,7 +278,10 @@
 export default {
   data() {
     return {
+      bottomCarousel:[],
+      carousel:[],
       value1: 0,
+      personFour:[],
       option1: [
         { text: '短租指南', value: 0 },
         { text: '房客指南', value: 1 },
@@ -349,6 +312,36 @@ export default {
     }
   },
   methods:{
+    bottomC(){
+       this.axios.get(
+        "/bottomSwi"   
+      ).then(res=>{
+        if(res.data.code==1){
+          this.bottomCarousel=res.data.data;   
+          console.log(res.data.data)
+        }
+      })
+    },
+    indexFour(){
+       this.axios.get(
+        "/indexFour"   
+      ).then(res=>{
+        if(res.data.code==1){
+          this.personFour=res.data.data;   
+          console.log(res.data.data)
+        }
+      })
+    },
+    indexCarousel(){
+      this.axios.get(
+        "/index"   
+      ).then(res=>{
+        if(res.data.code==1){
+          this.carousel=res.data.data;   
+          console.log(res.data.data)
+        }
+      })
+    },
     onConfirm(value) {
       this.value = value;
       this.showPicker = false;
@@ -361,6 +354,11 @@ export default {
         picker.setSlotValue(1, values[0]);
       }
     }  
+  },
+  created(){
+    this.indexCarousel();
+    this.indexFour();
+    this. bottomC();
   }
 }
 </script>
