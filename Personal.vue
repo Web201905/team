@@ -89,87 +89,87 @@
     </div>
   </div>
 </template>
-<style lang="less">
+<style scoped>
   .header{
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    .header_title{
-      font-weight: 700;
-      color: #333333;
-    }
+    align-items: center;  
   }
+  .header .header_title{
+    font-weight: 700;
+    color: #333333;
+  }
+
   .my_info{
     width: 92%;
+    margin: 0 auto;  
+  }
+  .my_info .top_section{
+    width: 100%;      
+    background: url('../../public/image/myInfoBg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;  
+  }
+  .my_info .top_section .kong{height: 2rem;}
+  .my_info .top_section .my_head_img{
+    width: 4.7rem;
+    height: 4.7rem;
+    background: rgba(10, 10, 10, 0.2);
+    border-radius: 50%;
     margin: 0 auto;
-    .top_section{
-      width: 100%;      
-      background: url('../../public/image/myInfoBg.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      border-radius: 10px;
-      .kong{height: 2rem;}
-      .my_head_img{
-        width: 4.7rem;
-        height: 4.7rem;
-        background: rgba(10, 10, 10, 0.2);
-        border-radius: 50%;
-        margin: 0 auto;
-      }
-      .my_user_name{
-        text-align: center;
-        font-weight: 600;
-        color: #ffffff;
-        font-size: 1.1rem;
-        margin-top: 0.8rem;
-      }
-      .four_section{
-        width: 96%;
-        margin: 2rem auto 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        .list_item{
-          width: 48%;
-          background: hsla(0,0%,100%,0.7);
-          margin-bottom: 0.5rem;
-          border-radius: 8px;
-          padding-top: 1.1rem;
-          padding-bottom: 1.1rem;
-          box-shadow: 0 0.08rem 0.213333rem #26282b40;
-          img{
-            width: 2rem;
-            margin-bottom: 0.3rem;
-          }
-          p{
-            color: #000000;
-          }
-        }
-      }
-    }
-    .list_wrap{
-      width: 100%;
-      .list-item{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 1rem;
-        .share{
-          font-size: 0.95rem;
-          color: #000000;
-        }
-        .list-item-right{
-          .jijin{
-            font-size: 0.95rem;
-            color: #000000;
-            margin-right: 0.3rem;
-          }
-          .pink{
-            color: #ff4081;
-          }
-        }
-      }
-    }
+  }
+  .my_info .top_section .my_user_name{
+    text-align: center;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+  }
+  .my_info .top_section .four_section{
+    width: 96%;
+    margin: 2rem auto 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+  }
+  .my_info .top_section .four_section .list_item{
+    width: 48%;
+    background: hsla(0,0%,100%,0.7);
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    box-shadow: 0 0.08rem 0.213333rem #26282b40;  
+  }
+  .my_info .top_section .four_section .list_item img{
+    width: 2rem;
+    margin-bottom: 0.3rem;
+  }
+  .my_info .top_section .four_section .list_item p{
+    color: #000000;
+  }
+
+  .my_info .list_wrap{
+    width: 100%;
+  }
+  .my_info .list_wrap .list-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;  
+  }
+  .my_info .list_wrap .list-item .share{
+    font-size: 0.95rem;
+    color: #000000;
+  }
+  .my_info .list_wrap .list-item .list-item-right .jijin{
+    font-size: 0.95rem;
+    color: #000000;
+    margin-right: 0.3rem; 
+  }
+  .my_info .list_wrap .list-item .list-item-right .pink{
+    color: #ff4081;
   }
 </style>
